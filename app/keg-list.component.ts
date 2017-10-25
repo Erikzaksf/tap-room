@@ -11,8 +11,11 @@ import { Keg } from './keg.model';
         Brewery: {{currentKeg.brand}}<br>
         Alc%:  {{currentKeg.alcoholContent}}<br>
         Price: $ {{currentKeg.price}}
+        <br>
         <button (click)="isEmpty(currentKeg)">Is it empty?</button>
-        <hr><br>
+        <br>
+        <button (click)="editButtonHasBeenClicked(currentTask)">Edit!</button>
+        <hr>
       </li>
       </ul>
   `
