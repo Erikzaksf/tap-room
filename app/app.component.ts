@@ -11,9 +11,9 @@ import { Keg } from './keg.model';
 
   <div class= "container">
     <h2>Welcome to Angular2 Elecro Boozeloo. Your friendly digital taphouse.</h2>
-
-    <keg-list [childKegList]="masterKegList" (clickSender)="editKeg($event)"></keg-list>
-
+    <div class= "container">
+      <keg-list [childKegList]="masterKegList" (clickSender)="editKeg($event)"></keg-list>
+    </div>
   </div>
 
 

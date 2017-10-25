@@ -5,10 +5,17 @@ import { Keg } from './keg.model';
 @Component({
   selector: 'keg-list',
   template: `
-  <ul>
-   <li (click)="isEmpty(currentKeg)" *ngFor="let currentKeg of childKegList">{{currentKeg.name}}  <button (click)="editButtonHasBeenClicked(currentTask)">Edit!</button></li>
-   </ul>
-   `
+    <ul>
+      <li *ngFor="let currentKeg of childKegList">
+        Name:  {{currentKeg.name}}<br>
+        Brewery: {{currentKeg.brand}}<br>
+        Alc%:  {{currentKeg.alcoholContent}}<br>
+        Price: $ {{currentKeg.price}}
+        <button (click)="isEmpty(currentKeg)">Is it empty?</button>
+        <hr><br>
+      </li>
+      </ul>
+  `
 
 })
 
