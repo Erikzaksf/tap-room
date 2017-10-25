@@ -6,7 +6,7 @@ import { KegListComponent }  from './keg-list.component';
 
 @NgModule({
   imports: [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, KegListComponent ],
+  declarations: [ AppComponent, KegListComponent],
   bootstrap:    [ AppComponent ]
 })
 

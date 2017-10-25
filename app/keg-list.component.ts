@@ -5,14 +5,11 @@ import { Keg } from './keg.model';
 @Component({
   selector: 'keg-list',
   template: `
-    <ul>
-      <li *ngFor="let currentKeg of childKegList">
-      Name:  {{currentKeg.name}}<br>
-      Brewery: {{currentKeg.brand}}<br>
-      Alc%:  {{currentKeg.alcoholContent}}<br>
-      Price: $ {{currentKeg.price}} <button (click)="editButtonHasBeenClicked(currentKeg)">Edit!</button></li></li>
-    </ul>
-  `
+  <ul>
+   <li (click)="isEmpty(currentKeg)" *ngFor="let currentKeg of childKegList">{{currentKeg.name}}  <button (click)="editButtonHasBeenClicked(currentTask)">Edit!</button></li>
+   </ul>
+   `
+
 })
 
 export class KegListComponent {
