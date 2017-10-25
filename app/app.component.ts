@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Keg } from './keg.model';
+
 
 @Component({
   selector: 'app-root',
@@ -10,9 +12,7 @@ import { Component } from '@angular/core';
   <div class= "container">
     <h2>Welcome to Angular2 Elecro Boozeloo. Your friendly digital taphouse.</h2>
     <h3>{{currentKeg}}</h3>
-      <ul>
-        <li *ngFor="let currentKeg of kegs">{{currentKeg.name}} <button (click)="editKeg()">Edit!</button></li>
-      </ul>
+    <keg-list [childKegList]="masterKegList" (clickSender)="editKeg($event)"></keg-list>
 
   </div>
 
@@ -25,18 +25,22 @@ import { Component } from '@angular/core';
 
 
 export class AppComponent {
-  kegs: Keg[] = [
-  new Keg('8 Bit Ale', 'GameBrew', 8, 12)
+  currentKeg: string = 'TestKeg';
+  selectedKeg = null;
+
+  masterKegList: Keg[] = [
+  new Keg('8 Bit Ale', 'GameBrew', 8, 12),
+  new Keg('Robot Oil', 'GameBrew', 9, 10)
   ];
-  selectedKeg: Keg = this.kegs[0];
+  selectedKeg = this.masterKegList[0];
 
-  editKeg() {
-    alert("Please create/edit a keg.");
+
+  editKeg(clickedKeg) {
+    this.selectedKeg = clickedKeg;
   }
-}
 
-export class Keg {
-  public pintsLeft: number = 124;
-  public empty: boolean = false;
-  constructor(public name: string, public brand: string, public alcoholContent: number, public price: number ) { }
+  finishedEditing()  {
+    this.selectedKeg = null;
+  }
+
 }
