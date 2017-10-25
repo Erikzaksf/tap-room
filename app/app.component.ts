@@ -8,15 +8,13 @@ import { Keg } from './keg.model';
   <div class= "jumbotron">
   <h1>Angular 2 Electro Boozeloo</h1>
   </div>
-
   <div class= "container">
     <h2>Welcome to Angular2 Elecro Boozeloo. Your friendly digital taphouse.</h2>
     <div class= "container">
       <keg-list [childKegList]="masterKegList" (clickSender)="editKeg($event)"></keg-list>
     </div>
+    <edit-keg [childSelectedKeg]="selectedKeg" (doneButtonClickedSender)="finishedEditing()"></edit-keg>
   </div>
-
-
   `
 })
 

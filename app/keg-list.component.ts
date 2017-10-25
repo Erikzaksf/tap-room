@@ -17,7 +17,7 @@ import { Keg } from './keg.model';
         <button (click)="editButtonHasBeenClicked(currentTask)">Edit!</button>
         <hr>
       </li>
-      </ul>
+    </ul>
   `
 
 })
