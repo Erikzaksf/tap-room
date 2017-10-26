@@ -5,8 +5,13 @@ import { Keg } from './keg.model';
 @Component({
   selector: 'keg-list',
   template: `
+    <select (change)="onChange($event.target.value)">
+      <option value="allKegs">All Kegs</option>
+      <option value="fullKegs">Full Kegs</option>
+      <option value="emptyKegs">Empty Kegs</option>
+    </select>
     <ul>
-      <li *ngFor="let currentKeg of childKegList">
+      <li *ngFor="let currentKeg of childKegList | emptyness:filterByEmptyness">
         <p style="color:#6640c4; font-size:35px;">{{currentKeg.name}} </p><br>
         Brewery:    {{currentKeg.brand}}<br>
         Alc%:       {{currentKeg.alcoholContent}}<br>
@@ -32,6 +37,11 @@ export class KegListComponent {
   @Input() childKegList: Keg[];
   @Output() clickSender = new EventEmitter();
 
+  filterByEmptyness: string = "fullKegs";
+
+  onChange(optionFromMenu) {
+  this.filterByEmptyness = optionFromMenu;
+  }
   editButtonHasBeenClicked(kegToEdit: Keg) {
     this.clickSender.emit(kegToEdit)
   }
