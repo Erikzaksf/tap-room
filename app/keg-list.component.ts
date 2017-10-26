@@ -42,11 +42,10 @@ export class KegListComponent {
 
   pourPitcher(clickedKeg: Keg){
     this.selectedKeg = clickedKeg;
-
     if(clickedKeg.pintsLeft > 10){
       this.selectedKeg.pintsLeft -= 10;
-      alert(this.selectedKeg.pintsLeft)
-  } else{ alert("This keg is empty, sorry for the inconvience")
+      window.alert("Pints left " + this.selectedKeg.pintsLeft)
+  } else{ window.alert("This keg is empty, sorry for the inconvience")
     }
   }
 }
