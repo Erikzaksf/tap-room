@@ -15,7 +15,7 @@ import { Keg } from './keg.model';
         <button (click)="isEmpty(currentKeg)">Is it empty?</button>
         <br>
         <button (click)="editButtonHasBeenClicked(currentKeg)">Edit!</button>
-        <hr>
+        <hr align="left" width="20%">
       </li>
     </ul>
   `

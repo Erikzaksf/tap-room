@@ -6,8 +6,8 @@ import { Keg } from './keg.model';
   template: `
     <div>
         <div *ngIf="childSelectedKeg">
-          <h3>{{childSelectedKeg.description}}</h3>
-          <p>Keg Complete? {{childSelectedKeg.empty}}</p>
+          <h3>{{childSelectedKeg.name}}</h3>
+          <p>Keg Empty? {{childSelectedKeg.empty}}</p>
           <hr>
           <h3>Edit Keg</h3>
           <label>Enter Keg Name:</label>
