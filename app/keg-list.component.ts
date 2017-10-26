@@ -10,7 +10,8 @@ import { Keg } from './keg.model';
         Name:  {{currentKeg.name}}<br>
         Brewery: {{currentKeg.brand}}<br>
         Alc%:  {{currentKeg.alcoholContent}}<br>
-        Price: $ {{currentKeg.price}}
+        Price: $ {{currentKeg.price}}<br>
+        Pints Left: {{currentKeg.pintsLeft}}
         <button (click)="pourPitcher(currentKeg)">Pour a round.</button>
         <br>
         <button (click)="isEmpty(currentKeg)">Is it empty?</button>
@@ -44,7 +45,6 @@ export class KegListComponent {
     this.selectedKeg = clickedKeg;
     if(clickedKeg.pintsLeft > 10){
       this.selectedKeg.pintsLeft -= 10;
-      window.alert("Pints left " + this.selectedKeg.pintsLeft)
   } else{ window.alert("This keg is empty, sorry for the inconvience")
     }
   }
