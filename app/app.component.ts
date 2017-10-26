@@ -32,7 +32,6 @@ export class AppComponent {
     new Keg('Robot Oil', 'GameBrew', 9, 10)
   ];
 
-
   editKeg(clickedKeg) {
     this.selectedKeg = clickedKeg;
   }

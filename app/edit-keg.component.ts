@@ -7,7 +7,7 @@ import { Keg } from './keg.model';
     <div>
         <div *ngIf="childSelectedKeg">
           <h3>{{childSelectedKeg.name}}</h3>
-          <p>Keg Empty? {{childSelectedKeg.empty}}</p>
+          <p>Keg Empty? {{childSelectedKeg.isEmpty}}</p>
           <hr>
           <h3>Edit Keg</h3>
           <label>Enter Keg Name:</label>
