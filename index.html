@@ -13,14 +13,16 @@
     <script src="node_modules/systemjs/dist/system.src.js"></script>
     <!-- 2. Configure SystemJS -->
     <script src="systemjs.config.js"></script>
-
     <link rel="stylesheet" href="build/css/styles.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=VT323');
+    </style>
     <script>
       System.import('app').catch(function(err){ console.error(err); });
     </script>
   </head>
   <!-- 3. Display the application -->
   <body>
-    <app-root>Loading...</app-root>
+    <app-root> Loading... </app-root>
   </body>
 </html>

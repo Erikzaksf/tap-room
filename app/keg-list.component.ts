@@ -7,10 +7,10 @@ import { Keg } from './keg.model';
   template: `
     <ul>
       <li *ngFor="let currentKeg of childKegList">
-        Name:  {{currentKeg.name}}<br>
-        Brewery: {{currentKeg.brand}}<br>
-        Alc%:  {{currentKeg.alcoholContent}}<br>
-        Price: $ {{currentKeg.price}}<br>
+        <p style="color:#6640c4; font-size:35px;">{{currentKeg.name}} </p><br>
+        Brewery:    {{currentKeg.brand}}<br>
+        Alc%:       {{currentKeg.alcoholContent}}<br>
+        Price:  $   {{currentKeg.price}}<br>
         Pints Left: {{currentKeg.pintsLeft}}
         <br>
         <button (click)="pourPitcher(currentKeg)">Pour a round.</button>

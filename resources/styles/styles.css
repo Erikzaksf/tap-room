@@ -1,0 +1,12 @@
+body {
+  color: #62b536;
+  background-image: url(https://i.pinimg.com/originals/39/cc/2e/39cc2e22a20d0fe09853468241fb0eac.jpg);
+  background-size: 100% 100%;
+  font-family: 'VT323', monospace;
+  font-size: 30px;
+}
+
+
+li {
+  font-size: 25px;
+}
