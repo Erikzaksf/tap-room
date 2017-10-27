@@ -28,6 +28,7 @@ export class EmptynessPipe implements PipeTransform {
     return output;
   } else {
     return input;
-  }
+    }
 
+  }
 }
